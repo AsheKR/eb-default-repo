@@ -1,0 +1,15 @@
+FROM                        python:3.6.7-slim
+MAINTAINER                  ex@ex.com
+
+ENV                         DJANGO_SETTINGS_MODULE  config.settings.dev
+ENV                         LANG                    c.UTF-8
+
+RUN                         apt -y update
+RUN                         apt -y dist-upgrade
+RUN                         apt -y install gcc supervisor nginx && \
+                            pip3 install uwsgi && \
+                            apt -y remove gcc && \
+                            apt -y autoremove
+
+COPY                        requirements_production.txt /tmp/requirements.txt
+RUN                         pip3 install -r /tmp/requirements.txt
