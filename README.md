@@ -2,18 +2,37 @@
 
 ## 호스트에서 필요한 세팅
 
-```text
-Ubuntu:18.04
-apt-get update
-python 3.6.6
-pyenv virtualenv
-docker
-postgresql postgresql-contrib
-zsh
+우분투 18.04
+[Makefile]() 내용을 복사 후 홈폴더에 `Makefile` 생성 후 내용 붙여넣기
 
-[pyenv 내부]
+```text
+# Make파일을 사용하기 위한 기본 사항
+sudo apt make
+# 개발환경 기본 세팅 다운
+make make_env
+zsh 설정 2번 선택
+# oh_my_zsh 다운
+make make_oh_my_zsh
+# pyenv 다운, 설정
+make_pyenv
+mkdir workspace && cd workspace
+git clone git@github.com:teachmesomething2580/eb-default-repo.git
+cd eb-default-repo/.dev
+# pyenv 3.3.6 설치
+make workspace_pyenv_get_version
+# .dev의 bin 파일 PATH 추가
+make workspace_make_path
+# ~/.aws/config 추가
+make workspace_make_aws_config
+cd ..
+pyenv virtualenv 3.6.6 <개발환경 이름>
+pyenv local <개발환경 이름>
+```
+
+```text
+[pyenv 설정 후 필요한 python 라이브러리]
+# AWS EB CLI 사용하기위한 라이브러리
 awsebcli
-psql
 ```
 
 ## AWS 설정사항
@@ -31,7 +50,7 @@ CREATE DATABASE "production용 이름";
 - EB 프로젝트 생성 (eb init --profile <credential 안에 넣은 태그 이름>)
 - EB 환경 생성 (eb create --profile <credential 안에 넣은 태그 이름>, balancer 설정은 application)
 
-## 설정 사항
+## 프로젝트 설정 사항
 
 - .secrets 폴더 생성
     - secret.json 생성
