@@ -3,7 +3,7 @@
 ## 호스트에서 필요한 세팅
 
 우분투 18.04
-[Makefile]() 내용을 복사 후 홈폴더에 `Makefile` 생성 후 내용 붙여넣기
+[Makefile](https://github.com/teachmesomething2580/eb-default-repo/blob/master/.dev/Makefile) 내용을 복사 후 홈폴더에 `Makefile` 생성 후 내용 붙여넣기
 
 ```text
 # Make파일을 사용하기 위한 기본 사항
