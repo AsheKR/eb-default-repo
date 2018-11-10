@@ -62,7 +62,7 @@ CREATE DATABASE "production용 이름";
     }
 ```
     
-    - production.json 생성
+- production.json 생성
     
 ```json
 {
@@ -80,7 +80,7 @@ CREATE DATABASE "production용 이름";
 }
 ```
     
-    - dev.json 생성
+- dev.json 생성
     
 ```json
 {
