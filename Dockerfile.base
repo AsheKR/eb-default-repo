@@ -1,7 +1,7 @@
 FROM                        python:3.6.7-slim
 MAINTAINER                  ex@ex.com
 
-ENV                         DJANGO_SETTINGS_MODULE  config.settings.dev
+ENV                         DJANGO_SETTINGS_MODULE  config.settings.production
 ENV                         LANG                    c.UTF-8
 
 RUN                         apt -y update
