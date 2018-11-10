@@ -54,15 +54,16 @@ CREATE DATABASE "production용 이름";
 
 - .secrets 폴더 생성
     - secret.json 생성
-    ```json
+```json
     {
       "SECRET_KEY": "",
       "AWS_ACCESS_KEY_ID": "",
       "AWS_SECRET_ACCESS_KEY": ""
     }
-    ```
+```
     
     - production.json 생성
+    
 ```json
 {
   "AWS_STORAGE_BUCKET_NAME": "",
@@ -80,6 +81,7 @@ CREATE DATABASE "production용 이름";
 ```
     
     - dev.json 생성
+    
 ```json
 {
   "AWS_STORAGE_BUCKET_NAME": "",
