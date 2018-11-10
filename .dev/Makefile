@@ -17,8 +17,6 @@ make_env:
    		stable"; \
 	sudo apt-get -y update; \
 	sudo apt-get -y install docker-ce; \
-	apt-cache madison docker-ce; \
-	sudo apt-get -y install docker-ce; \
 	sudo apt-get -y install postgresql postgresql-contrib; \
 	sudo apt-get -y install zsh; \
 	chsh -s `which zsh`; \
