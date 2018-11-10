@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+git add -f .secrets/
+eb deploy --profile eb_workspace_user --staged &
+sleep 3
+git reset HEAD .secrets/

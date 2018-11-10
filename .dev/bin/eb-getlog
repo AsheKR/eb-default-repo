@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+LOG_NGINX='/var/log/nginx/error.log'
+LOG_ERROR='/srv/projects/.log/error.log'
+CMD='sudo docker exec $(sudo docker ps -q) tail -f'
+eb ssh --command "tail -f $LOG_NGINX & $CMD $LOG_ERROR $LOG_NGINX"
