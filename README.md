@@ -40,15 +40,17 @@ awsebcli
 - RDS 생성 (EC2/보안그룹 생성(허용 5432))
 - S3 생성 (버킷 2개 생성)
 - IAM 유저 생성 (AmazonS3FullAccess를 가진 유저 생성 후 액세스 키, 시크릿 키를 secret.json 내에 넣음(아래 참조))
-- RDS 데이터베이스 생성(production용 DB, dev용 DB 두개 생성)
+- RDS 데이터베이스 생성(psql 명령어를 통해 production용 DB, dev용 DB 두개 생성)
 ```bash
 psql --user="" --host="엔드포인트" postgres
 CREATE DATABASE "dev용 이름";
 CREATE DATABASE "production용 이름";
 ```
 - IAM 유저 생성(AWSElasticBeanstalkFullAccess, 인라인 정책(IAM -> CreateLinkedRole))을 가진 유저 생성 (액세스, 시크릿키를 ~/.aws/credential)안에 넣음
-- EB 프로젝트 생성 (eb init --profile <credential 안에 넣은 태그 이름>)
+- EB 프로젝트 생성 (eb init --profile <credential 안에 넣은 태그 이름>), eb key는 반드시 생성하도록하자
 - EB 환경 생성 (eb create --profile <credential 안에 넣은 태그 이름>, balancer 설정은 application)
+    실패하는게 정상이다. 아래 실행에서 다시 실행하면 정상적으로 작동한다.
+- EB 환경 생성 후 `EC2/보안그룹`에서 RDS 허용한것에 `SecurityGroup for Elastic..`  의 그룹 ID를 추가한다.
 
 ## 프로젝트 설정 사항
 
@@ -103,6 +105,8 @@ CREATE DATABASE "production용 이름";
     
     
 ## 실행
-
+반드시 프로젝트 최상위 폴더에서!
+eb-deploy로 실행
+문제가 있을 시 eb-getlog를 통해 (nginx, django)로그를 확인한다.
     
 ## ETC
