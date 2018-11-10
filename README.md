@@ -16,7 +16,7 @@ make make_oh_my_zsh
 # pyenv 다운, 설정
 make_pyenv
 mkdir workspace && cd workspace
-git clone git@github.com:teachmesomething2580/eb-default-repo.git
+git clone https://github.com/teachmesomething2580/eb-default-repo.git
 cd eb-default-repo/.dev
 # pyenv 3.3.6 설치
 make workspace_pyenv_get_version
