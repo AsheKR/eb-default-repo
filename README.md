@@ -9,7 +9,7 @@
 # Make파일을 사용하기 위한 기본 사항
 sudo apt -y install make
 # 개발환경 기본 세팅 다운
-make make_env
+make make_env > make_log
 zsh 설정 2번 선택
 # oh_my_zsh 다운
 make make_oh_my_zsh
