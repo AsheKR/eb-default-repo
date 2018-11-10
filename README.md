@@ -3,11 +3,13 @@
 ## 호스트에서 필요한 세팅
 
 ```text
+Ubuntu:18.04
 apt-get update
 python 3.6.6
 pyenv virtualenv
 docker
 postgresql postgresql-contrib
+zsh
 
 [pyenv 내부]
 awsebcli
@@ -25,6 +27,9 @@ psql --user="" --host="엔드포인트" postgres
 CREATE DATABASE "dev용 이름";
 CREATE DATABASE "production용 이름";
 ```
+- IAM 유저 생성(AWSElasticBeanstalkFullAccess, 인라인 정책(IAM -> CreateLinkedRole))을 가진 유저 생성 (액세스, 시크릿키를 ~/.aws/credential)안에 넣음
+- EB 프로젝트 생성 (eb init --profile <credential 안에 넣은 태그 이름>)
+- EB 환경 생성 (eb create --profile <credential 안에 넣은 태그 이름>, balancer 설정은 application)
 
 ## 설정 사항
 
@@ -70,6 +75,13 @@ CREATE DATABASE "production용 이름";
     }
   }
 }
-    ```
+    ``
+    
+- .dev/bin eb-deploy의 profile 부분 변경
+    
+    
+    
+## 실행
+
     
 ## ETC

@@ -1,3 +1,6 @@
+# Dev
+.dev/
+
 # media, static
 .media/
 .static/
@@ -271,3 +274,8 @@ pip-selfcheck.json
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 
 # End of https://www.gitignore.io/api/linux,macos,python,virtualenv,pycharm+all,elasticbeanstalk
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

@@ -4,7 +4,9 @@ PRODUCTION_JSON = json.load(open(os.path.join(SECRETS_DIR, 'production.json')))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.elasticbeanstalk.com',
+]
 
 WSGI_APPLICATION = 'config.wsgi.production.application'
 
