@@ -63,7 +63,7 @@ CREATE DATABASE "production용 이름";
     ```
     
     - production.json 생성
-    ```json
+```json
 {
   "AWS_STORAGE_BUCKET_NAME": "",
   "DATABASES" : {
@@ -77,10 +77,10 @@ CREATE DATABASE "production용 이름";
     }
   }
 }
-    ```
+```
     
     - dev.json 생성
-    ```json
+```json
 {
   "AWS_STORAGE_BUCKET_NAME": "",
   "DATABASES" : {
@@ -94,7 +94,7 @@ CREATE DATABASE "production용 이름";
     }
   }
 }
-    ``
+```
     
 - .dev/bin eb-deploy의 profile 부분 변경
     
