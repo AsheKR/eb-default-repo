@@ -25,6 +25,7 @@ make_env:
 make_oh_my_zsh:
 	sudo apt -y install git; \
 	curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+	exit
 
 make_pyenv:
 	curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash; \
