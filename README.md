@@ -14,7 +14,7 @@ zsh 설정 2번 선택
 # oh_my_zsh 다운
 make make_oh_my_zsh
 # pyenv 다운, 설정
-make_pyenv
+make make_pyenv
 mkdir workspace && cd workspace
 git clone https://github.com/teachmesomething2580/eb-default-repo.git
 cd eb-default-repo/.dev
