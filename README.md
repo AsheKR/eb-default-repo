@@ -33,8 +33,13 @@ cd ..
 [pyenv 설정 후 필요한 python 라이브러리]
 pip install pipenv
 pipenv --python 3.6.6
+# 생성한 환경 적용
 pipenv shell
-pipenv install --dev
+# 이후 파이썬 라이브러리 설치
+# Dev용
+pip install --dev [Package]
+# 일반
+pip install [Package]
 ```
 
 ## AWS 설정사항
