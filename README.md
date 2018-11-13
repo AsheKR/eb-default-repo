@@ -25,16 +25,17 @@ make workspace_make_path
 # ~/.aws/config 추가
 make workspace_make_aws_config
 cd ..
-pyenv virtualenv 3.6.6 <개발환경 이름>
-pyenv local <개발환경 이름>
 ```
 
 [한글패치](http://gabii.tistory.com/entry/Ubuntu-1804-LTS-%ED%95%9C%EA%B8%80-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%A4%EC%A0%95)
 
 ```text
 [pyenv 설정 후 필요한 python 라이브러리]
+#pipenv 사용하여 requirements 관리
+pip install pipenv
+pipenv --python 3.6.6
 # AWS EB CLI 사용하기위한 라이브러리
-awsebcli
+pipenv install awsebcli
 ```
 
 ## AWS 설정사항
