@@ -50,6 +50,7 @@ CREATE DATABASE "production용 이름";
 ```
 - IAM 유저 생성(AWSElasticBeanstalkFullAccess, 인라인 정책(IAM -> CreateLinkedRole))을 가진 유저 생성 (액세스, 시크릿키를 ~/.aws/credential)안에 넣음
 - EB 프로젝트 생성 (eb init --profile <credential 안에 넣은 태그 이름>), eb key는 반드시 생성하도록하자
+- 
 - EB 환경 생성 (eb create --profile <credential 안에 넣은 태그 이름>, balancer 설정은 application)
     실패하는게 정상이다. 아래 실행에서 다시 실행하면 정상적으로 작동한다.
 - EB 환경 생성 후 `EC2/보안그룹`에서 RDS 허용한것에 `SecurityGroup for Elastic..`  의 그룹 ID를 추가한다.
