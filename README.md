@@ -37,9 +37,9 @@ pipenv --python 3.6.6
 pipenv shell
 # 이후 파이썬 라이브러리 설치
 # Dev용
-pip install --dev [Package]
-# 일반
-pip install [Package]
+pipenv install --dev [Package]
+# production용
+pipenv install [Package]
 ```
 
 ## AWS 설정사항
