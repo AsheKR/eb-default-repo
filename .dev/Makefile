@@ -44,3 +44,4 @@ workspace_make_path:
 workspace_make_aws_config:
 	mkdir ~/.aws; \
 	cp -f ./config ~/.aws/config
+	cp -f ./credential ~/.aws/credential
