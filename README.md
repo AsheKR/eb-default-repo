@@ -31,11 +31,10 @@ cd ..
 
 ```text
 [pyenv 설정 후 필요한 python 라이브러리]
-#pipenv 사용하여 requirements 관리
 pip install pipenv
 pipenv --python 3.6.6
-# AWS EB CLI 사용하기위한 라이브러리
-pipenv install awsebcli
+pipenv shell
+pipenv install --dev
 ```
 
 ## AWS 설정사항
